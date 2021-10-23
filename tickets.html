@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickets</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/tickets.css">
 </head>
 <body class="container">
 
@@ -36,20 +36,60 @@
   <!--------------------------------------------------- Inicio Main ----------------------------------------------------------------------->
   <main class="container">
     
-    
-    
-    
     <div class="container">
       <br>
       <div class="row justify-content-md-center">
+
         <div class="col-md-auto">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="card" style="width: 12rem;" id="estu">
+                  <div class="card-body">
+                    <h5 class="card-title">Estudiante</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Tienen un descuento</h6>
+                    <h5 class="card-title">80%</h5>
+                    <p class="card-text" id="aclara">*Presentar documentacion</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card" style="width: 12rem;" id="trai">
+                  <div class="card-body">
+                    <h5 class="card-title">Trainee</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Tienen un descuento</h6>
+                    <h5 class="card-title">50%</h5>
+                    <p class="card-text" id="aclara">*Presentar documentacion</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card" style="width: 12  rem;" id="juni">
+                  <div class="card-body">
+                    <h5 class="card-title">Junior</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Tienen un descuento</h6>
+                    <h5 class="card-title">15%</h5>
+                    <p class="card-text" id="aclara">*Presentar documentacion</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
+
           <form>
+            <br>
             <div class="row  d-flex flex-column align-items-center  ">
               <h6 class=" mb-0 col-8  col-sm-12 d-flex justify-content-center text-center">VENTA</h6>
               <h1 class=" mb-0 col-8 col-sm-12    d-flex  justify-content-center">VALOR DE TICKET $200</h1>
               
             </div>
             
+            <br>
+
             <div class="row gx-1 gy-2">
                 <div class="col-sm-12 col-md-6 ">
                     <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
@@ -58,33 +98,37 @@
                     <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
                 </div>    
             </div>
-
-            <div class="row gx-1 gy-2"></div>
-                <input type="text" class="form-control" placeholder="Correo" aria-label="Correo">
-            
-
+            <br>  
 
             <div class="row gx-1 gy-2">
+                <input type="text" class="form-control" placeholder="Correo" aria-label="Correo">
+            
+              </div>
+              <br>
+            <div class="row gx-1 gy-2">
                 <div class="col-sm-12 col-md-6 ">
-                    <input type="text" class="form-control" placeholder="Cantidad" aria-label="Cantidad">
+                  <label for="formGroupExampleInput">Cantidad</label>
+                    <input type="number" min="1" pattern="^[0-9]+" class="form-control" placeholder="Cantidad" aria-label="Cantidad" id="cant">
                 </div>
                 <div class="col-sm-12 col-md-6 ">
-                <select class="form-select" aria-label="Default select example">
-                    <option value="1">Estudiante</option>
-                    <option value="2">Trainee</option>
-                    <option value="3">Junior</option>
+                  <label for="formGroupExampleInput">Categoria</label>
+                <select class="form-select" aria-label="Default select example" id="catego">
+                    <option value="1">Seleccionar</option>
+                    <option value="2">Estudiante</option>
+                    <option value="3">Trainee</option>
+                    <option value="4">Junior</option>
                 </select>
             </div>
             </div>
-
-
+            <br>
+            <div id="result"></div>
             <div class="row gx-1 gy-2">
-                <div class="col-sm-12 col-md-6 ">
-                    <button class="btn btn-success" type="button">Borrar</button>    
-                </div>
-                <div class=" col-sm-12 col-md-6">
-                    <button class="btn btn-success" type="button">Resumen</button>   
-                </div>    
+                <div class="col-sm-12 col-md-6 ">    
+                    <button class="btn btn-success" type="button" id="clear">Borrar</button>    
+                 </div>   
+                 <div class=" col-sm-12 col-md-6">   
+                    <button class="btn btn-success" type="button" id="calculate">Resumen</button>   
+                 </div>    
             </div>
 
             
@@ -92,10 +136,11 @@
             
 
 
-        </div>
+        
 
 
           </form>
+          </div>
         </div>
       </div>
     </div>
@@ -136,5 +181,6 @@
 <!--------------------------------------------------- Fin Footer -------------------------------------------------------------------------->
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="compra.js"></script> 
 </body>
 </html>

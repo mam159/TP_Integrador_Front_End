@@ -1,0 +1,63 @@
+
+.btn-success{
+    background-color:  rgb(156, 211, 57);
+    border-color: transparent;
+  }
+  
+    #texto {
+      color: rgb(138, 136, 136);
+    }
+  
+    
+    .navbar-light{
+      background-color: rgb(45, 77, 104);
+    }
+  
+    #nav {
+      max-width: 9em;
+      color: white;
+      text-decoration: white;
+      padding: 20px;
+    }
+  
+    #comprar{
+      background-color:  rgb(56, 175, 63);
+      border-color: transparent;
+    }
+  
+    #fotoPrincipal{
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../images/ba1.jpg);
+      text-align: right;
+      height: 65rem;
+      padding: 60px;
+    }
+  
+    .charla {
+      border-bottom:1px dotted #9999CC;
+      text-decoration:none;
+    }
+
+    .col-sm{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #estu{
+        border-color: blue;
+    }
+
+    #trai{
+        border-color: cornflowerblue;
+    }
+
+    #juni{
+        border-color: rgb(245, 178, 9);
+    }
+
+    .card-title{
+        text-align: center;
+    }
+
+    #aclara{
+        color:rgb(138, 136, 136);
+    }
